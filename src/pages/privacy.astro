@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Privacy Policy | Private Drive">
+  <Navigation />
+  
+  <main class="bg-white pt-24">
+    <!-- Header Section -->
+    <header class="max-w-[1440px] mx-auto px-6 md:px-24 py-20 border-b border-zinc-100">
+      <div class="max-w-2xl fade-up">
+        <p class="text-[10px] font-bold text-primary uppercase tracking-[0.5em] mb-4">Legal Document</p>
+        <h1 class="text-6xl md:text-8xl font-black text-zinc-900 uppercase tracking-tighter leading-[0.85] mb-8">
+          Privacy<br/>Policy
+        </h1>
+        <p class="text-zinc-500 text-sm md:text-base leading-relaxed font-medium">
+          Your privacy matters to us. This policy outlines how Private Drive collects, uses, and protects your personal information.
+        </p>
+      </div>
+    </header>
+
+    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-24">
+      <div class="max-w-3xl space-y-16">
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">1. Information We Collect</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>We collect personal information that you voluntarily provide when using our services, including:</p>
+            <ul class="space-y-3 list-none">
+              <li class="border-l-2 border-zinc-100 pl-6"><strong class="text-zinc-900">Contact Information</strong> — Full name, email address, phone number</li>
+              <li class="border-l-2 border-zinc-100 pl-6"><strong class="text-zinc-900">Identification</strong> — Driver's license, passport or government-issued ID</li>
+              <li class="border-l-2 border-zinc-100 pl-6"><strong class="text-zinc-900">Rental Details</strong> — Vehicle preferences, rental dates, pickup/return locations</li>
+              <li class="border-l-2 border-zinc-100 pl-6"><strong class="text-zinc-900">Payment Data</strong> — Credit card information (processed via secure third-party payment providers)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">2. How We Use Your Information</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>Your information is used to:</p>
+            <ul class="space-y-3 list-none">
+              <li class="border-l-2 border-zinc-100 pl-6">Process and manage vehicle reservations</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Verify identity and driver eligibility</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Communicate regarding your booking (confirmations, updates, receipts)</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Improve our services and personalize your experience</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Comply with legal obligations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">3. Data Protection</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>We implement industry-standard security measures to protect your personal information, including encryption, secure servers, and restricted access protocols. We do not sell, trade, or rent your personal information to third parties.</p>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">4. Cookies & Tracking</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>Our website uses essential cookies to ensure proper functionality and remember your language preference. We do not use invasive tracking or third-party advertising cookies.</p>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">5. Your Rights</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>Under applicable data protection regulations (including GDPR), you have the right to:</p>
+            <ul class="space-y-3 list-none">
+              <li class="border-l-2 border-zinc-100 pl-6">Access your personal data</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Request correction or deletion of your data</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Withdraw consent at any time</li>
+              <li class="border-l-2 border-zinc-100 pl-6">Lodge a complaint with a supervisory authority</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fade-up">
+          <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-8">6. Contact</h3>
+          <div class="space-y-6 text-zinc-600 text-sm leading-relaxed">
+            <p>For privacy-related inquiries, please contact our team through the <a href="/contact" class="text-primary font-bold hover:underline">Contact page</a>.</p>
+            <p class="text-zinc-400 text-xs mt-8">Last updated: April 2026</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>

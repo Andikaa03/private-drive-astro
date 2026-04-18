@@ -1,0 +1,132 @@
+---
+import { fleet } from '../data/fleet.js';
+const featuredCars = fleet.filter(car => car.featured);
+---
+
+<section class="bg-surface py-32 px-6 md:px-24">
+  <div class="flex justify-between items-center mb-16 fade-up">
+    <h2 class="text-xs font-bold tracking-[0.3em] uppercase text-zinc-400" data-i18n="collection.title">
+      Current Collection Preview
+    </h2>
+    <div class="flex gap-4">
+      <button
+        id="carousel-prev"
+        class="w-12 h-12 border border-outline-variant/30 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-all"
+      >
+        <span class="material-symbols-outlined">chevron_left</span>
+      </button>
+      <button
+        id="carousel-next"
+        class="w-12 h-12 border border-outline-variant/30 flex items-center justify-center text-zinc-400 hover:text-primary hover:border-primary transition-all"
+      >
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="overflow-hidden">
+    <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out" style="gap: 3rem;">
+      {featuredCars.map((car) => (
+        <div class="carousel-card flex-shrink-0 w-[calc(25%-2.25rem)] fade-up" style="min-width: calc(25% - 2.25rem);">
+          <a href="/fleet" class="relative aspect-[4/5] overflow-hidden mb-6 bg-surface-container-low block group">
+            <img
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              alt={car.name}
+              src={car.image}
+            />
+            <div
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 text-[9px] font-bold tracking-widest uppercase text-zinc-900"
+            >
+              {car.brand} {car.year}
+            </div>
+          </a>
+          <div class="flex flex-col h-full">
+            <h4 class="text-xl font-extrabold text-zinc-900 tracking-tighter uppercase mb-2">
+              {car.brand} {car.name}
+            </h4>
+            <div class="flex justify-between items-center mb-6">
+              <span class="text-zinc-400 font-label text-[10px] uppercase tracking-widest">
+                {car.year} · <span data-i18n={`color.${car.color}`}>{car.color}</span> · {car.stats.power || car.stats.range || <span>{car.stats.seats} <span data-i18n="car.stats.seats">Seats</span></span>}
+              </span>
+              <span class="text-primary font-bold text-sm tracking-tighter">
+                {car.price} <span data-i18n="collection.day">/ Day</span>
+              </span>
+            </div>
+            <a 
+              href="/contact" 
+              class="w-full bg-primary text-white py-4 text-[9px] font-bold uppercase tracking-[0.3em] text-center hover:bg-zinc-900 transition-all active:scale-95 shadow-lg"
+              data-i18n="collection.reserve"
+            >
+              Reserve
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 1024px) {
+    .carousel-card {
+      min-width: calc(50% - 1.5rem) !important;
+      width: calc(50% - 1.5rem) !important;
+    }
+  }
+  @media (max-width: 640px) {
+    .carousel-card {
+      min-width: 100% !important;
+      width: 100% !important;
+    }
+  }
+</style>
+
+<script>
+  function initCarousel() {
+    const track = document.getElementById('carousel-track');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    if (!track || !prevBtn || !nextBtn) return;
+
+    const cards = track.querySelectorAll('.carousel-card');
+    const gap = 48; // 3rem = 48px
+    let currentIndex = 0;
+
+    function getVisibleCount() {
+      if (window.innerWidth <= 640) return 1;
+      if (window.innerWidth <= 1024) return 2;
+      return 4;
+    }
+
+    function getMaxIndex() {
+      const visible = getVisibleCount();
+      return Math.max(0, cards.length - visible);
+    }
+
+    function scrollToIndex(index) {
+      const card = cards[0] as HTMLElement;
+      if (!card) return;
+      const cardWidth = card.offsetWidth;
+      const offset = index * (cardWidth + gap);
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      scrollToIndex(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = Math.min(getMaxIndex(), currentIndex + 1);
+      scrollToIndex(currentIndex);
+    });
+
+    window.addEventListener('resize', () => {
+      currentIndex = Math.min(currentIndex, getMaxIndex());
+      scrollToIndex(currentIndex);
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initCarousel);
+  document.addEventListener('astro:page-load', initCarousel);
+</script>

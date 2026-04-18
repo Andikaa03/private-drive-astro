@@ -1,0 +1,168 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Protocol & Contact | Private Drive Premium Collection">
+  <main class="bg-white pt-24">
+    <!-- Header Section -->
+    <header class="max-w-[1440px] mx-auto px-6 md:px-24 py-20 flex flex-col md:flex-row items-center gap-16">
+      <div class="flex-1 fade-up">
+        <h1 class="text-6xl md:text-8xl font-black text-zinc-900 uppercase tracking-tighter leading-[0.85] mb-8" data-i18n="contact.header">
+          Protocol &<br/>
+          Contact
+        </h1>
+        <p class="text-zinc-500 text-sm md:text-base max-w-sm leading-relaxed font-medium" data-i18n="contact.desc">
+          Transparency is the foundation of our service. Review our operational requirements and connect with our concierge team to secure your allocation.
+        </p>
+      </div>
+      <div class="flex-1 w-full aspect-[4/3] relative overflow-hidden bg-zinc-100 fade-up">
+        <img 
+          src="/premium_car_interior_grayscale.png" 
+          alt="Premium Car Interior"
+          class="w-full h-full object-cover opacity-90"
+        />
+      </div>
+    </header>
+
+    <!-- Detailed Policies Section (Verbatim SOW) -->
+    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-24 border-t border-zinc-100 grid grid-cols-1 md:grid-cols-2 gap-24">
+      <!-- Rental Requirements -->
+      <div class="fade-up">
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-12" data-i18n="contact.requirements">Rental Requirements</h3>
+        <div class="space-y-12">
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.age.head">Age Limit</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.age.desc">All drivers must be <span class="text-zinc-900 font-bold">25 years or older</span>.</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.license.head">Driver's License</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.license.desc">A valid, current driver’s license is required at the time of pickup.</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.id.head">Identification</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.id.desc">A secondary form of ID (Passport) must be provided for all non-resident operators.</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.deposit.head">Security Deposit</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.deposit.desc">A refundable security deposit of <span class="text-zinc-900 font-bold">100 euros</span> is required via credit card for all rentals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vehicle Usage -->
+      <div class="fade-up">
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-12" data-i18n="contact.usage">Vehicle Usage Policies</h3>
+        <div class="space-y-12">
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.smoking.head">No Smoking</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.smoking.desc">A strictly enforced no-smoking policy applies. A cleaning fee of <span class="text-zinc-900 font-bold">50 euros</span> applies to violations.</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.fuel.head">Fuel Policy</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.fuel.desc">Cars must be returned with the same level of fuel as at the start (Full-to-Full).</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.clean.head">Cleanliness</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.clean.desc">Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.</p>
+          </div>
+          <div class="border-l-2 border-zinc-100 pl-8">
+            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.mileage.head">Mileage</h4>
+            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.mileage.desc">Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insurance & returns -->
+    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-24 bg-zinc-50 grid grid-cols-1 md:grid-cols-2 gap-24">
+      <div class="fade-up">
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-400 mb-12" data-i18n="contact.insurance">Insurance & Liability</h3>
+        <div class="space-y-8">
+          <p class="text-sm font-bold text-zinc-900 leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.insure.desc">Renters must provide proof of their own full-coverage insurance or purchase our supplemental protection plan.</p>
+          <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.damage.desc">Any damage, no matter how minor, must be reported to us immediately. Use is permitted within the French Metropolitan area only.</p>
+        </div>
+      </div>
+      <div class="fade-up">
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-400 mb-12" data-i18n="contact.cancellation">Cancellations & Returns</h3>
+        <div class="space-y-8">
+          <p class="text-sm font-bold text-zinc-900 leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.refund.desc">Full refund for cancellations made at least 48 hours in advance.</p>
+          <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.grace.desc">A grace period of 30 minutes is provided for returns; thereafter, hourly late fees apply in full.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inquiry Form -->
+    <section class="py-32 px-6 md:px-24">
+      <div class="max-w-[1440px] mx-auto text-center pt-24 fade-up">
+        <h2 class="text-4xl md:text-5xl font-black text-zinc-900 uppercase tracking-tighter mb-4" data-i18n="contact.form.title">Secure Your Allocation</h2>
+        <p class="text-zinc-400 text-xs font-bold uppercase tracking-[0.3em] mb-20" data-i18n="contact.form.sub">Direct Lead Routing to Concierge Service</p>
+        
+        <form action="mailto:concierge@privatedrive.com" method="POST" enctype="text/plain" class="max-w-4xl mx-auto text-left space-y-12">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
+            <div class="space-y-4">
+              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.name">Full Name</label>
+              <input type="text" name="name" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium" placeholder="Full Name" data-i18n="contact.form.name.placeholder" />
+            </div>
+            <div class="space-y-4">
+              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.email">Email Address</label>
+              <input type="email" name="email" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium" placeholder="email@example.com" data-i18n="contact.form.email.placeholder" />
+            </div>
+            <div class="space-y-4">
+              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.dates">Dates Requested</label>
+              <input type="date" name="dates" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium text-zinc-900 uppercase tracking-widest" />
+            </div>
+            <div class="space-y-4">
+              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.vehicle">Preferred Vehicle</label>
+              <select name="vehicle" class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium">
+                <option value="" disabled selected data-i18n="contact.form.vehicle.placeholder">Select from Inventory</option>
+                <option>Tesla Model 3</option>
+                <option>Tesla Model S Plaid</option>
+                <option>Jeep Wrangler (Red)</option>
+                <option>Jeep Grand Cherokee (Dark Green)</option>
+                <option>Audi A6 Sedan (White)</option>
+                <option>Peugeot 208 GT (Black)</option>
+                <option>Nissan Pathfinder SL (White)</option>
+                <option>Kia Sorento (White)</option>
+                <option>Mercedes-Benz A-Class (Black)</option>
+                <option>Hyundai Elantra (Black)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="space-y-4">
+            <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.special">Special Requirements</label>
+            <textarea name="requirements" rows="3" class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium resize-none" placeholder="Special requirements or delivery address..." data-i18n="contact.form.req.placeholder"></textarea>
+          </div>
+
+          <div class="flex justify-center pt-12">
+            <button type="submit" class="bg-primary text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-zinc-900 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 shadow-xl active:scale-95 flex items-center gap-3 group" data-i18n="contact.form.btn">
+              Submit Inquire Now
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Google Maps Section -->
+    <section id="map-section" class="relative w-full h-[600px] overflow-hidden border-t border-zinc-100">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.2922926156710444!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1621258169134!5m2!1sen!2sfr" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+      <div class="absolute inset-0 pointer-events-none flex items-center justify-center p-6">
+        <div class="bg-white p-8 border border-zinc-200 shadow-2xl text-center max-w-sm">
+          <h4 class="text-[10px] font-black tracking-[0.4em] uppercase text-zinc-900 mb-3 underline underline-offset-8 decoration-primary" data-i18n="contact.map.head">Official Headquarters</h4>
+          <p class="text-[11px] text-zinc-400 leading-relaxed font-bold uppercase tracking-widest mb-1" data-i18n="contact.map.region">Paris Metropolitan Area</p>
+          <p class="text-[9px] text-zinc-400 font-medium" data-i18n="contact.map.country">French Republic</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

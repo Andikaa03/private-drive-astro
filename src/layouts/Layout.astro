@@ -1,0 +1,616 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" class="light">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Private Drive | Le Nouveau Standard de Mouvement" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+		
+		<!-- Material Symbols -->
+		<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet" />
+
+    <ClientRouter />
+	</head>
+	<body>
+    <Navigation />
+		<slot />
+    <Footer />
+
+    <script is:inline>
+      const translations = {
+        en: {
+          'nav.home': 'Home',
+          'nav.collection': 'Collection',
+          'nav.policies': 'Policies & Contact',
+          'nav.reserve': 'Reserve Now',
+          'hero.title': 'The New Standard of Motion',
+          'hero.subtitle': 'Premium local rentals in Paris. Experience the new standard of motion with a curated fleet designed for the discerning traveler.',
+          'hero.cta.view': 'View Collection',
+          'hero.cta.exp': 'Experience',
+          'hero.featured.head': 'Current Feature',
+          'hero.explore': 'Explore',
+          'process.header': 'Refining the Rental Ethos.',
+          'process.desc': 'We have dismantled the traditional rental process, replacing it with a curated concierge-led flow designed for the modern professional.',
+          'process.explore': 'Explore Collection',
+          'process.requirements': 'View Requirements',
+          'process.secure': 'Secure Allocation',
+          'step1.title': 'Select Vehicle',
+          'step1.desc': 'Browse our curated autodrome of premium electric and hybrid models.',
+          'step2.title': 'Verify Protocol',
+          'step2.desc': 'Once your choice is locked, our concierge coordinates the identification and protocol verification.',
+          'step3.title': 'Collective Motion',
+          'step3.desc': 'Experience the new standard of motion. Your vehicle is delivered in pristine condition at your Paris location.',
+          'collection.title': 'Current Collection Preview',
+          'collection.reserve': 'Reserve',
+          'collection.premium': 'Premium Series',
+          'collection.day': '/ Day',
+          'feature.title': 'Silent Authority.',
+          'feature.desc': 'The luxury of silence is the ultimate performance metric. Our fleet represents the absolute peak of electric mobility in the heart of Paris.',
+          'feature.stats.speed': '0-100 KM/H',
+          'feature.stats.range': 'RANGE',
+          'feature.box.head': 'The Collection',
+          'feature.box.desc': 'Every vehicle in our fleet is maintained to factory-fresh standards by master technicians.',
+          'footer.tagline': 'Redefining the premium rental experience for the electric age. Precision, performance, and pure silence.',
+          'footer.nav.head': 'Navigation',
+          'footer.legal.head': 'Legal',
+          'footer.privacy': 'Privacy',
+          'footer.terms': 'Terms',
+          'footer.newsletter.head': 'Newsletter',
+          'footer.newsletter.desc': 'Join the collection for updates on new arrivals.',
+          'footer.newsletter.submit': 'Submit',
+          'footer.newsletter.placeholder': 'YOUR EMAIL',
+          'footer.copyright': '© 2026 PRIVATE DRIVE. ENGINEERED FOR PRECISION.',
+          'fleet.pg.top': 'Exceptional Rental Profiles',
+          'fleet.pg.head': 'The Curated Autodrome',
+          'fleet.pg.desc': 'A curated selection of high-performance machines, chosen for technical prowess and aesthetic significance.',
+          'fleet.pg.core': 'Core Collection',
+          'fleet.pg.reserve': 'Inquire & Reserve',
+          'fleet.pg.features': 'Top Features',
+          'fleet.pg.details': 'The Details',
+          'fleet.pg.units': '01 — 04 UNITS',
+          'fleet.pg.bestfor': 'Best Suited For',
+          'fleet.pg.expansion.top': 'Extended Inventory',
+          'fleet.pg.expansion.head': 'The Architectural Expansion',
+          'fleet.pg.expansion.btn': 'Reserve',
+          'fleet.pg.expansion.booked': 'Booked',
+          'fleet.pg.incentive.head': 'Inquire About Custom Incentive',
+          'fleet.pg.incentive.sub': 'Talk to concierge →',
+          'car.status.Available': 'Available',
+          'car.status.Booked': 'Booked',
+          'contact.header': 'Protocol & Contact',
+          'contact.desc': 'Transparency is the foundation of our service. Review our operational requirements.',
+          'contact.requirements': 'Rental Requirements',
+          'contact.usage': 'Vehicle Usage Policies',
+          'contact.insurance': 'Insurance & Liability',
+          'contact.cancellation': 'Cancellations & Returns',
+          'contact.policy.age.head': 'Age Limit',
+          'contact.policy.age.desc': 'All drivers must be 25 years or older.',
+          'contact.policy.license.head': 'Driver\'s License',
+          'contact.policy.license.desc': 'A valid, current driver\'s license is required at the time of pickup.',
+          'contact.policy.id.head': 'Identification',
+          'contact.policy.id.desc': 'A secondary form of ID (Passport) must be provided for all non-resident operators.',
+          'contact.policy.deposit.head': 'Security Deposit',
+          'contact.policy.deposit.desc': 'A refundable security deposit of 100 euros is required via credit card for all rentals.',
+          'contact.policy.smoking.head': 'No Smoking',
+          'contact.policy.smoking.desc': 'A strictly enforced no-smoking policy applies. A cleaning fee of 50 euros applies to violations.',
+          'contact.policy.fuel.head': 'Fuel Policy',
+          'contact.policy.fuel.desc': 'Cars must be returned with the same level of fuel as at the start (Full-to-Full).',
+          'contact.policy.clean.head': 'Cleanliness',
+          'contact.policy.clean.desc': 'Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.',
+          'contact.policy.mileage.head': 'Mileage',
+          'contact.policy.mileage.desc': 'Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.',
+          'contact.policy.insure.desc': 'Renters must provide proof of their own full-coverage insurance or purchase our supplemental protection plan.',
+          'contact.policy.damage.desc': 'Any damage, no matter how minor, must be reported to us immediately. Use is permitted within the French Metropolitan area only.',
+          'contact.policy.refund.desc': 'Full refund for cancellations made at least 48 hours in advance.',
+          'contact.policy.grace.desc': 'A grace period of 30 minutes is provided for returns; thereafter, hourly late fees apply in full.',
+          'contact.form.title': 'Secure Your Allocation',
+          'contact.form.sub': 'Direct Lead Routing to Concierge Service',
+          'contact.form.name': 'Full Name',
+          'contact.form.email': 'Email Address',
+          'contact.form.dates': 'Dates Requested',
+          'contact.form.vehicle': 'Preferred Vehicle',
+          'contact.form.special': 'Special Requirements',
+          'contact.form.btn': 'Submit Inquire Now',
+          'contact.map.head': 'Official Headquarters',
+          'contact.map.region': 'Paris Metropolitan Area',
+          'contact.map.country': 'French Republic',
+          'contact.form.name.placeholder': 'Full Name',
+          'contact.form.email.placeholder': 'email@example.com',
+          'contact.form.vehicle.placeholder': 'Select from Inventory',
+          'contact.form.req.placeholder': 'Special requirements or delivery address...',
+          'status.Available': 'Available',
+          'status.Booked': 'Booked',
+          'color.Black': 'Black',
+          'color.White': 'White',
+          'color.Red': 'Red',
+          'color.Dark Green': 'Dark Green',
+          'car.stats.power': 'Power',
+          'car.stats.seats': 'Seats',
+          'car.stats.range': 'Range',
+          'car.stats.tech': 'Technology',
+          'car.stats.capability': 'Capability',
+          'car.stats.economy': 'Economy',
+          'car.stats.safety': 'Safety',
+          'car.stats.navigation': 'Navigation',
+          'car.peugeot-208-gt.vibe': 'Chic, ultra-modern French style with a sporty \'hot hatch\' edge.',
+          'car.peugeot-208-gt.feat0': 'Signature \'Triple Claw\' LED lighting',
+          'car.peugeot-208-gt.feature0': 'Signature \'Triple Claw\' LED lighting',
+          'car.peugeot-208-gt.feat1': '3D i-Cockpit digital dash',
+          'car.peugeot-208-gt.feat2': 'Compact sporty steering wheel',
+          'car.peugeot-208-gt.detail0': 'Zippy 1.2L turbocharged engine',
+          'car.peugeot-208-gt.detail1': 'Smooth automatic transmission',
+          'car.peugeot-208-gt.detail2': 'High-quality \'GT\' interior finishes',
+          'car.peugeot-208-gt.best0': 'Solo travelers',
+          'car.peugeot-208-gt.best1': 'Style-conscious couples',
+          'car.peugeot-208-gt.best2': 'Navigating tight city streets',
+          'car.nissan-pathfinder-sl.vibe': 'The ultimate command center for big family adventures.',
+          'car.nissan-pathfinder-sl.feat0': 'Massive 12.3\" digital dashboard',
+          'car.nissan-pathfinder-sl.feature0': 'Massive 12.3\" digital dashboard',
+          'car.nissan-pathfinder-sl.feat1': 'Intelligent 4x4 with 7 drive modes',
+          'car.nissan-pathfinder-sl.feat2': 'Tri-zone climate control system',
+          'car.nissan-pathfinder-sl.detail0': 'Strong V6 engine with 284 hp',
+          'car.nissan-pathfinder-sl.detail1': '3.5L capacity',
+          'car.nissan-pathfinder-sl.detail2': 'EZ FLEX sliding second-row seats',
+          'car.nissan-pathfinder-sl.best0': 'Large families',
+          'car.nissan-pathfinder-sl.best1': 'Group road trips',
+          'car.nissan-pathfinder-sl.best2': 'Anyone needing serious cargo space',
+          'car.tesla-model-s-plaid.vibe': 'The pinnacle of electric performance—luxury that feels like a spaceship.',
+          'car.tesla-model-s-plaid.feat0': 'Mind-bending 1,020 hp tri-motor setup',
+          'car.tesla-model-s-plaid.feature0': 'Mind-bending 1,020 hp tri-motor setup',
+          'car.tesla-model-s-plaid.feat1': '17-inch cinematic touchscreen',
+          'car.tesla-model-s-plaid.feat2': 'Iconic futuristic \'Yoke\' steering wheel',
+          'car.tesla-model-s-plaid.detail0': '0–60 mph in 1.99 seconds',
+          'car.tesla-model-s-plaid.detail1': '400+ miles of range',
+          'car.tesla-model-s-plaid.detail2': 'Ultra-premium vegan leather interior',
+          'car.tesla-model-s-plaid.best0': 'Tech enthusiasts',
+          'car.tesla-model-s-plaid.best1': 'Luxury lovers',
+          'car.tesla-model-s-plaid.best2': 'Speed seekers',
+          'car.audi-a6-sedan.vibe': 'Understated German opulence and professional sophistication.',
+          'car.audi-a6-sedan.feat0': 'Dual-touchscreen MMI interface',
+          'car.audi-a6-sedan.feature0': 'Dual-touchscreen MMI interface',
+          'car.audi-a6-sedan.feat1': 'Quattro all-wheel drive',
+          'car.audi-a6-sedan.feat2': 'Matrix-design LED headlights',
+          'car.audi-a6-sedan.detail0': 'Mild-hybrid engine for smooth efficiency',
+          'car.audi-a6-sedan.detail1': 'Virtual cockpit digital gauges',
+          'car.audi-a6-sedan.detail2': 'Serene, sound-insulated cabin',
+          'car.audi-a6-sedan.best0': 'Executive business travel',
+          'car.audi-a6-sedan.best1': 'Airport transfers',
+          'car.audi-a6-sedan.best2': 'Refined date nights',
+          'car.jeep-grand-cherokee.vibe': 'High-end ruggedness; it looks as good at a five-star hotel as it does on a mountain trail.',
+          'car.jeep-grand-cherokee.feat0': 'Deep \'Rocky Mountain\' green paint',
+          'car.jeep-grand-cherokee.feature0': 'Deep \'Rocky Mountain\' green paint',
+          'car.jeep-grand-cherokee.feat1': 'Uconnect 5 system with 10.1\" screen',
+          'car.jeep-grand-cherokee.feat2': 'Legendary Selec-Terrain traction control',
+          'car.jeep-grand-cherokee.detail0': 'Premium 4x4 capability',
+          'car.jeep-grand-cherokee.detail1': 'Luxury-tier seating',
+          'car.jeep-grand-cherokee.detail2': 'Spacious trunk for outdoor gear',
+          'car.jeep-grand-cherokee.best0': 'Adventurous families',
+          'car.jeep-grand-cherokee.best1': 'Travelers wanting a \'tough\' look',
+          'car.jeep-grand-cherokee.best2': 'Winter escapes',
+          'car.kia-sorento.vibe': 'Smart, reliable versatility with a surprisingly high-end interior.',
+          'car.kia-sorento.feat0': '\'SynTex\' durable seating',
+          'car.kia-sorento.feature0': '\'SynTex\' durable seating',
+          'car.kia-sorento.feat1': 'Panoramic sunroof',
+          'car.kia-sorento.feat2': '13 standard safety assist features',
+          'car.kia-sorento.detail0': '3 rows of seating (fits 6–7)',
+          'car.kia-sorento.detail1': 'Great fuel economy for its size',
+          'car.kia-sorento.detail2': '10.25-inch navigation screen',
+          'car.kia-sorento.best0': 'Families needing 3 rows',
+          'car.kia-sorento.best1': 'Compact SUV preference',
+          'car.kia-sorento.best2': 'Budget-conscious luxury',
+          'car.mercedes-a-class.vibe': 'Compact luxury that makes a big \'first impression.\'',
+          'car.mercedes-a-class.feat0': '\'MBUX\' voice-controlled assistant',
+          'car.mercedes-a-class.feature0': '\'MBUX\' voice-controlled assistant',
+          'car.mercedes-a-class.feat1': 'Ambient interior lighting (64 colors)',
+          'car.mercedes-a-class.feat2': 'Twin-screen dashboard',
+          'car.mercedes-a-class.detail0': 'Sporty 2.0L engine',
+          'car.mercedes-a-class.detail1': 'AMG-line body styling',
+          'car.mercedes-a-class.detail2': 'Premium 10-speaker sound system',
+          'car.mercedes-a-class.best0': 'Young professionals',
+          'car.mercedes-a-class.best1': 'Urban weekenders',
+          'car.mercedes-a-class.best2': 'Brand conscious drivers',
+          'car.tesla-model-3.vibe': 'Modern, eco-friendly luxury and high-tech performance.',
+          'car.tesla-model-3.feat0': 'Center touchscreen experience',
+          'car.tesla-model-3.feature0': 'Center touchscreen experience',
+          'car.tesla-model-3.feat1': 'Panoramic glass architecture',
+          'car.tesla-model-3.feat2': 'Premium vegan leather interior',
+          'car.tesla-model-3.detail0': 'All-electric performance',
+          'car.tesla-model-3.detail1': 'Seats 5 adults comfortably',
+          'car.tesla-model-3.detail2': 'Advanced Autopilot safety',
+          'car.tesla-model-3.best0': 'Business travelers',
+          'car.tesla-model-3.best1': 'Tech enthusiasts',
+          'car.tesla-model-3.best2': 'Eco-conscious couples',
+          'car.jeep-wrangler.vibe': 'Rugged, iconic, and ready for adventure.',
+          'car.jeep-wrangler.feat0': 'Authentic 4x4 capability',
+          'car.jeep-wrangler.feature0': 'Authentic 4x4 capability',
+          'car.jeep-wrangler.feat1': 'Removable top architecture',
+          'car.jeep-wrangler.feat2': 'Iconic rugged silhouette',
+          'car.jeep-wrangler.detail0': 'Strong performance profile',
+          'car.jeep-wrangler.detail1': 'Integrated tech connectivity',
+          'car.jeep-wrangler.detail2': 'Substantial ground clearance',
+          'car.jeep-wrangler.best0': 'Weekend explorers',
+          'car.jeep-wrangler.best1': 'Outdoor enthusiasts',
+          'car.jeep-wrangler.best2': 'Bold style statements',
+          'car.hyundai-elantra.vibe': 'Sleek, fuel-efficient, and dependable urban sophistication.',
+          'car.hyundai-elantra.feat0': 'Contemporary exterior design',
+          'car.hyundai-elantra.feature0': 'Contemporary exterior design',
+          'car.hyundai-elantra.feat1': 'Intelligent infotainment console',
+          'car.hyundai-elantra.feat2': 'Superior efficiency metrics',
+          'car.hyundai-elantra.detail0': 'Refined interior comfort',
+          'car.hyundai-elantra.detail1': 'Integrated safety suite',
+          'car.hyundai-elantra.detail2': 'Optimized cargo space',
+          'car.hyundai-elantra.best0': 'Smart urban transit',
+          'car.hyundai-elantra.best1': 'Efficient city driving',
+          'car.hyundai-elantra.best2': 'Modern small families'
+        },
+        fr: {
+          'nav.home': 'Accueil',
+          'nav.collection': 'Collection',
+          'nav.policies': 'Politiques & Contact',
+          'nav.reserve': 'Réserver',
+          'hero.title': 'Le Nouveau Standard de Mouvement',
+          'hero.subtitle': 'Locations locales premium à Paris. Découvrez le nouveau standard de mouvement avec une flotte sélectionnée.',
+          'hero.cta.view': 'Voir la Collection',
+          'hero.cta.exp': 'Expérience',
+          'hero.featured.head': 'Vedette Actuelle',
+          'hero.explore': 'Explorer',
+          'process.header': 'Raffiner l\'Ethos de la Location.',
+          'process.desc': 'Nous avons remplacé le processus traditionnel par un flux géré par concierge conçu pour le professionnel moderne.',
+          'process.explore': 'Explorer la Collection',
+          'process.requirements': 'Voir les Exigences',
+          'process.secure': 'Sécuriser l\'Allocation',
+          'step1.title': 'Sélectionner le Véhicule',
+          'step1.desc': 'Parcourez notre autodrome sélectionné de modèles électriques et hybrides haut de gamme.',
+          'step2.title': 'Vérifier le Protocole',
+          'step2.desc': 'Une fois votre choix arrêté, notre concierge coordonne l\'identification et la vérification.',
+          'step3.title': 'Mouvement Collectif',
+          'step3.desc': 'Découvrez le nouveau standard de mouvement. Votre véhicule est livré en parfait état à Paris.',
+          'collection.title': 'Aperçu de la Collection Actuelle',
+          'collection.reserve': 'Réserver',
+          'collection.premium': 'Série Premium',
+          'collection.day': '/ Jour',
+          'feature.title': 'Autorité Silencieuse.',
+          'feature.desc': 'Le luxe du silence est la métrique de performance ultime. Notre flotte représente le sommet absolu de la mobilité électrique.',
+          'feature.stats.speed': '0-100 KM/H',
+          'feature.stats.range': 'AUTONOMIE',
+          'feature.box.head': 'La Collection',
+          'feature.box.desc': 'Chaque véhicule de notre flotte est entretenu selon les normes d\'usine par des techniciens experts.',
+          'footer.tagline': 'Redéfinir l\'expérience de location premium pour l\'ère électrique. Précision, performance et silence pur.',
+          'footer.nav.head': 'Navigation',
+          'footer.legal.head': 'Légal',
+          'footer.privacy': 'Confidentialité',
+          'footer.terms': 'Conditions',
+          'footer.newsletter.head': 'Newsletter',
+          'footer.newsletter.desc': 'Rejoignez la collection pour rester informé.',
+          'footer.newsletter.submit': 'Envoyer',
+          'footer.newsletter.placeholder': 'VOTRE EMAIL',
+          'footer.copyright': '© 2026 PRIVATE DRIVE. INGÉNIERIE DE PRÉCISION.',
+          'fleet.pg.top': 'Profils de Location Exceptionnels',
+          'fleet.pg.head': 'L\'Autodrome Sélectionné',
+          'fleet.pg.desc': 'Une sélection rigoureuse de machines haute performance, choisie pour leur prouesse technique et leur portée esthétique.',
+          'fleet.pg.core': 'Collection de Base',
+          'fleet.pg.reserve': 'Demander & Réserver',
+          'fleet.pg.features': 'Caractéristiques',
+          'fleet.pg.details': 'Les Détails',
+          'fleet.pg.units': '01 — 04 UNITÉS',
+          'fleet.pg.bestfor': 'Idéal Pour',
+          'fleet.pg.expansion.top': 'Inventaire Étendu',
+          'fleet.pg.expansion.head': 'L\'Expansion Architecturale',
+          'fleet.pg.expansion.btn': 'Réserver',
+          'fleet.pg.expansion.booked': 'Complet',
+          'fleet.pg.incentive.head': 'Demander une incitation personnalisée',
+          'fleet.pg.incentive.sub': 'Parler au concierge →',
+          'car.stats.power': 'Puissance',
+          'car.stats.seats': 'Sièges',
+          'car.stats.range': 'Autonomie',
+          'car.stats.tech': 'Technologie',
+          'car.stats.capability': 'Capacité',
+          'car.stats.economy': 'Économie',
+          'car.stats.safety': 'Sécurité',
+          'car.stats.navigation': 'Navigation',
+          'car.status.Available': 'Disponible',
+          'car.status.Booked': 'Complet',
+          'contact.header': 'Protocole & Contact',
+          'contact.desc': 'La transparence est la base de notre service. Consultez nos exigences opérationnelles.',
+          'contact.requirements': 'Exigences de Location',
+          'contact.usage': 'Politiques d\'Utilisation',
+          'contact.insurance': 'Assurance & Responsabilité',
+          'contact.cancellation': 'Annulations & Retours',
+          'contact.policy.age.head': 'Limite d\'âge',
+          'contact.policy.age.desc': 'Conducteurs de 25 ans ou plus uniquement.',
+          'contact.policy.license.head': 'Permis de conduire',
+          'contact.policy.license.desc': 'Permis de conduire valide requis lors de la livraison.',
+          'contact.policy.id.head': 'Identification',
+          'contact.policy.id.desc': 'Passeport requis pour les conducteurs non-résidents.',
+          'contact.policy.deposit.head': 'Dépôt de garantie',
+          'contact.policy.deposit.desc': 'Dépôt remboursable de 100€ par carte de crédit.',
+          'contact.policy.smoking.head': 'Non-fumeur',
+          'contact.policy.smoking.desc': 'Frais de 50€ pour infraction à l\'interdiction de fumer.',
+          'contact.policy.fuel.head': 'Politique Carburant',
+          'contact.policy.fuel.desc': 'Retour avec le plein (Plein à Plein).',
+          'contact.policy.clean.head': 'Propreté',
+          'contact.policy.clean.desc': 'Frais de nettoyage en cas de saleté excessive.',
+          'contact.policy.mileage.head': 'Kilométrage',
+          'contact.policy.mileage.desc': '20 km/jour inclus. 20€/km supplémentaire.',
+          'contact.policy.insure.desc': 'Assurance tous risques obligatoire ou plan de protection local.',
+          'contact.policy.damage.desc': 'Signaler tout dommage immédiatement. Usage limité à la France métropolitaine.',
+          'contact.policy.refund.desc': 'Remboursement intégral si annulé 48h à l\'avance.',
+          'contact.policy.grace.desc': 'Délai de grâce de 30 min pour le retour.',
+          'contact.form.title': 'Sécurisez votre Allocation',
+          'contact.form.sub': 'Routage direct de la demande au service Concierge',
+          'contact.form.name': 'Nom Complet',
+          'contact.form.email': 'Adresse Email',
+          'contact.form.dates': 'Dates Demandées',
+          'contact.form.vehicle': 'Véhicule Préféré',
+          'contact.form.special': 'Exigences Particulières',
+          'contact.form.btn': 'Envoyer la Demande',
+          'contact.map.head': 'Siège Officiel',
+          'contact.map.region': 'Région Métropolitaine de Paris',
+          'contact.map.country': 'République Française',
+          'contact.form.name.placeholder': 'Prénom et Nom',
+          'contact.form.email.placeholder': 'email@exemple.com',
+          'contact.form.vehicle.placeholder': 'Sélectionnez depuis l\'inventaire',
+          'contact.form.req.placeholder': 'Exigences spéciales ou adresse de livraison...',
+          'status.Available': 'Disponible',
+          'status.Booked': 'Complet',
+          'color.Black': 'Noir',
+          'color.White': 'Blanc',
+          'color.Red': 'Rouge',
+          'color.Dark Green': 'Vert Foncé',
+          'car.peugeot-208-gt.vibe': 'Style français chic et moderne avec une allure sportive.',
+          'car.peugeot-208-gt.feat0': 'Éclairage LED signature \'Triple Griffe\'',
+          'car.peugeot-208-gt.feature0': 'Éclairage LED signature \'Triple Griffe\'',
+          'car.peugeot-208-gt.feat1': 'i-Cockpit numérique 3D',
+          'car.peugeot-208-gt.feat2': 'Volant sport compact',
+          'car.peugeot-208-gt.detail0': 'Moteur turbo 1,2L vif',
+          'car.peugeot-208-gt.detail1': 'Transmission automatique fluide',
+          'car.peugeot-208-gt.detail2': 'Finitions intérieures \'GT\' haute qualité',
+          'car.peugeot-208-gt.best0': 'Voyageurs solo',
+          'car.peugeot-208-gt.best1': 'Couples stylés',
+          'car.peugeot-208-gt.best2': 'Rues étroites de la ville',
+          'car.nissan-pathfinder-sl.vibe': 'Le centre de commande ultime pour les aventures en famille.',
+          'car.nissan-pathfinder-sl.feat0': 'Tableau de bord numérique 12,3 pouces',
+          'car.nissan-pathfinder-sl.feature0': 'Tableau de bord numérique 12,3 pouces',
+          'car.nissan-pathfinder-sl.feat1': '4x4 intelligent, 7 modes de conduite',
+          'car.nissan-pathfinder-sl.feat2': 'Climatisation tri-zone',
+          'car.nissan-pathfinder-sl.detail0': 'Moteur V6 puissant de 284 ch',
+          'car.nissan-pathfinder-sl.detail1': 'Capacité moteur 3,5L',
+          'car.nissan-pathfinder-sl.detail2': 'Sièges coulissants EZ FLEX',
+          'car.nissan-pathfinder-sl.best0': 'Grandes familles',
+          'car.nissan-pathfinder-sl.best1': 'Road trips en groupe',
+          'car.nissan-pathfinder-sl.best2': 'Grand volume de chargement',
+          'car.tesla-model-s-plaid.vibe': 'Le sommet de l\'électrique — un luxe spatial.',
+          'car.tesla-model-s-plaid.feat0': 'Configuration tri-moteur de 1 020 ch',
+          'car.tesla-model-s-plaid.feature0': 'Configuration tri-moteur de 1 020 ch',
+          'car.tesla-model-s-plaid.feat1': 'Écran tactile cinématique de 17 pouces',
+          'car.tesla-model-s-plaid.feat2': 'Volant futuriste \'Yoke\' iconique',
+          'car.tesla-model-s-plaid.detail0': '0–100 km/h en environ 2s',
+          'car.tesla-model-s-plaid.detail1': 'Plus de 600 km d\'autonomie',
+          'car.tesla-model-s-plaid.detail2': 'Intérieur cuir vegan premium',
+          'car.tesla-model-s-plaid.best0': 'Passionnés de technologie',
+          'car.tesla-model-s-plaid.best1': 'Amateurs de luxe',
+          'car.tesla-model-s-plaid.best2': 'Amateurs de vitesse',
+          'car.audi-a6-sedan.vibe': 'Opulence allemande discrète et sophistication.',
+          'car.audi-a6-sedan.feat0': 'Interface MMI à double écran tactile',
+          'car.audi-a6-sedan.feature0': 'Interface MMI à double écran tactile',
+          'car.audi-a6-sedan.feat1': 'Transmission intégrale Quattro',
+          'car.audi-a6-sedan.feat2': 'Phares LED Matrix',
+          'car.audi-a6-sedan.detail0': 'Moteur hybride léger efficace',
+          'car.audi-a6-sedan.detail1': 'Tableau de bord Virtual Cockpit',
+          'car.audi-a6-sedan.detail2': 'Cabine sereine insonorisée',
+          'car.audi-a6-sedan.best0': 'Voyages d\'affaires exécutifs',
+          'car.audi-a6-sedan.best1': 'Transferts aéroport',
+          'car.audi-a6-sedan.best2': 'Soirées raffinées',
+          'car.jeep-grand-cherokee.vibe': 'Robustesse haut de gamme ; élégant partout.',
+          'car.jeep-grand-cherokee.feat0': 'Peinture vert profond \'Rocky Mountain\'',
+          'car.jeep-grand-cherokee.feature0': 'Peinture vert profond \'Rocky Mountain\'',
+          'car.jeep-grand-cherokee.feat1': 'Système Uconnect 5 avec écran 10,1 pouces',
+          'car.jeep-grand-cherokee.feat2': 'Contrôle de traction Selec-Terrain',
+          'car.jeep-grand-cherokee.detail0': 'Capacité 4x4 premium',
+          'car.jeep-grand-cherokee.detail1': 'Sièges de classe luxe',
+          'car.jeep-grand-cherokee.detail2': 'Coffre spacieux pour équipement',
+          'car.jeep-grand-cherokee.best0': 'Familles aventureuses',
+          'car.jeep-grand-cherokee.best1': 'Look robuste et élégant',
+          'car.jeep-grand-cherokee.best2': 'Escapades hivernales',
+          'car.kia-sorento.vibe': 'Polyvalence fiable avec un intérieur haut de gamme.',
+          'car.kia-sorento.feat0': 'Sièges durables \'SynTex\'',
+          'car.kia-sorento.feature0': 'Sièges durables \'SynTex\'',
+          'car.kia-sorento.feat1': 'Toit ouvrant panoramique',
+          'car.kia-sorento.feat2': '13 fonctions d\'aide à la sécurité',
+          'car.kia-sorento.detail0': '3 rangées de sièges (6–7 places)',
+          'car.kia-sorento.detail1': 'Excellente économie de carburant',
+          'car.kia-sorento.detail2': 'Écran de navigation 10,25 pouces',
+          'car.kia-sorento.best0': 'Familles (3 rangées)',
+          'car.kia-sorento.best1': 'Préférence SUV compact',
+          'car.kia-sorento.best2': 'Luxe abordable',
+          'car.mercedes-a-class.vibe': 'Luxe compact qui marque les esprits.',
+          'car.mercedes-a-class.feat0': 'Assistant vocal \'MBUX\'',
+          'car.mercedes-a-class.feature0': 'Assistant vocal \'MBUX\'',
+          'car.mercedes-a-class.feat1': 'Éclairage d\'ambiance (64 couleurs)',
+          'car.mercedes-a-class.feat2': 'Tableau de bord à double écran',
+          'car.mercedes-a-class.detail0': 'Moteur 2.0L sportif',
+          'car.mercedes-a-class.detail1': 'Style carrosserie AMG-line',
+          'car.mercedes-a-class.detail2': 'Système audio 10 haut-parleurs',
+          'car.mercedes-a-class.best0': 'Jeunes professionnels',
+          'car.mercedes-a-class.best1': 'City-breaks urbains',
+          'car.mercedes-a-class.best2': 'Image de marque premium',
+          'car.tesla-model-3.vibe': 'Luxe moderne, écologique et performant.',
+          'car.tesla-model-3.feat0': 'Écran central de 15,4 pouces',
+          'car.tesla-model-3.feature0': 'Écran central de 15,4 pouces',
+          'car.tesla-model-3.feat1': 'Toit vitré panoramique',
+          'car.tesla-model-3.feat2': 'Intérieur en cuir végan premium',
+          'car.tesla-model-3.detail0': 'Performance 100% électrique',
+          'car.tesla-model-3.detail1': '5 places confortables',
+          'car.tesla-model-3.detail2': 'Sécurité Autopilot avancée',
+          'car.tesla-model-3.best0': 'Voyageurs d\'affaires',
+          'car.tesla-model-3.best1': 'Passionnés de tech',
+          'car.tesla-model-3.best2': 'Couples éco-responsables',
+          'car.jeep-wrangler.vibe': 'Robuste, iconique et prêt pour l\'aventure.',
+          'car.jeep-wrangler.feat0': 'Capacité 4x4 authentique',
+          'car.jeep-wrangler.feature0': 'Capacité 4x4 authentique',
+          'car.jeep-wrangler.feat1': 'Toit amovible (plein air)',
+          'car.jeep-wrangler.feat2': 'Silhouette baroudeuse iconique',
+          'car.jeep-wrangler.detail0': 'Profil de performance robuste',
+          'car.jeep-wrangler.detail1': 'Connectivité tech intégrée',
+          'car.jeep-wrangler.detail2': 'Garde au sol substantielle',
+          'car.jeep-wrangler.best0': 'Explorateurs de week-end',
+          'car.jeep-wrangler.best1': 'Passionnés de plein air',
+          'car.jeep-wrangler.best2': 'Style affirmé',
+          'car.hyundai-elantra.vibe': 'Élégance urbaine et économie de carburant.',
+          'car.hyundai-elantra.feat0': 'Extérieur Abyss Black',
+          'car.hyundai-elantra.feature0': 'Extérieur Abyss Black',
+          'car.hyundai-elantra.feat1': 'Écran tactile 8 pouces intuitif',
+          'car.hyundai-elantra.feat2': 'Consommation exceptionnelle',
+          'car.hyundai-elantra.detail0': 'Confort intérieur raffiné',
+          'car.hyundai-elantra.detail1': 'Suite de sécurité intégrée',
+          'car.hyundai-elantra.detail2': 'Espace de chargement optimisé',
+          'car.hyundai-elantra.best0': 'Économie et style',
+          'car.hyundai-elantra.best1': 'Conduite urbaine',
+          'car.hyundai-elantra.best2': 'Petites familles'
+        }
+      };
+
+      function updateLanguage(lang) {
+        document.documentElement.lang = lang;
+        localStorage.setItem('preferred-lang', lang);
+        
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[lang] && translations[lang][key]) {
+            const translation = translations[lang][key];
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.placeholder = translation;
+            } else if (el.tagName === 'OPTION') {
+              el.textContent = translation;
+            } else {
+              el.textContent = translation;
+            }
+          }
+        });
+
+        // Update active toggle state
+        document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+          if (btn.getAttribute('data-lang-btn') === lang) {
+            btn.classList.add('bg-primary', 'text-white', 'shadow-sm');
+            btn.classList.remove('text-zinc-400', 'hover:text-zinc-900', 'hover:bg-zinc-200/50');
+          } else {
+            btn.classList.remove('bg-primary', 'bg-zinc-900', 'text-white', 'shadow-sm');
+            btn.classList.add('text-zinc-400', 'hover:text-zinc-900', 'hover:bg-zinc-200/50');
+          }
+        });
+      }
+
+      // Intersection Observer for animations
+      let staggerTimer = null;
+      let staggerCount = 0;
+
+      function initAnimations() {
+        const fadeEls = document.querySelectorAll('.fade-up');
+        if (fadeEls.length > 0) {
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Use a global stagger to ensure sequence even across batches
+                const currentStagger = staggerCount;
+                staggerCount++;
+                
+                // Reset stagger count after a short break in intersections
+                clearTimeout(staggerTimer);
+                staggerTimer = setTimeout(() => {
+                  staggerCount = 0;
+                }, 400);
+
+                setTimeout(() => {
+                  entry.target.classList.add('is-visible');
+                }, currentStagger * 100);
+                
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+          fadeEls.forEach(el => observer.observe(el));
+        }
+      }
+
+      // Single event handler for page loads/transitions
+      function setup() {
+        const savedLang = localStorage.getItem('preferred-lang') || 'en';
+        updateLanguage(savedLang);
+        initAnimations();
+      }
+
+      // Initial load
+      document.addEventListener('DOMContentLoaded', setup);
+      // View Transitions load
+      document.addEventListener('astro:page-load', setup);
+
+      window.switchLanguage = (lang) => {
+        updateLanguage(lang);
+      };
+    </script>
+	</body>
+</html>
+
+<style is:global>
+  @reference "../styles/global.css";
+
+	.material-symbols-outlined {
+		font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Manrope', sans-serif;
+	}
+
+	body {
+		@apply bg-white text-zinc-900 overflow-x-hidden;
+	}
+
+	/* Animations */
+	.fade-up {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+	}
+
+	.fade-up.is-visible {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	/* Custom Hide Scrollbar */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+</style>
