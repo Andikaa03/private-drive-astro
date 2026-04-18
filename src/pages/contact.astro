@@ -32,21 +32,33 @@ import Footer from '../components/Footer.astro';
       <div class="fade-up">
         <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-12" data-i18n="contact.requirements">Rental Requirements</h3>
         <div class="space-y-12">
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.age.head">Age Limit</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.age.desc">All drivers must be <span class="text-zinc-900 font-bold">25 years or older</span>.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">badge</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.age.head">Age Limit</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.age.desc">All drivers must be <span class="text-zinc-900 font-bold">25 years or older</span>.</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.license.head">Driver's License</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.license.desc">A valid, current driver’s license is required at the time of pickup.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">credit_score</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.license.head">Driver's License</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.license.desc">A valid, current driver’s license is required at the time of pickup.</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.id.head">Identification</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.id.desc">A secondary form of ID (Passport) must be provided for all non-resident operators.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">public</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.id.head">Identification</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.id.desc">A secondary form of ID (Passport) must be provided for all non-resident operators.</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.deposit.head">Security Deposit</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.deposit.desc">A refundable security deposit of <span class="text-zinc-900 font-bold">100 euros</span> is required via credit card for all rentals.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.deposit.head">Security Deposit</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.deposit.desc">A refundable security deposit of <span class="text-zinc-900 font-bold">100 euros</span> is required via credit card for all rentals.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -55,21 +67,33 @@ import Footer from '../components/Footer.astro';
       <div class="fade-up">
         <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-12" data-i18n="contact.usage">Vehicle Usage Policies</h3>
         <div class="space-y-12">
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.smoking.head">No Smoking</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.smoking.desc">A strictly enforced no-smoking policy applies. A cleaning fee of <span class="text-zinc-900 font-bold">50 euros</span> applies to violations.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">smoke_free</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.smoking.head">No Smoking</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.smoking.desc">A strictly enforced no-smoking policy applies. A cleaning fee of <span class="text-zinc-900 font-bold">50 euros</span> applies to violations.</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.fuel.head">Fuel Policy</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.fuel.desc">Cars must be returned with the same level of fuel as at the start (Full-to-Full).</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">local_gas_station</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.fuel.head">Fuel Policy</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.fuel.desc">Cars must be returned with the same level of fuel as at the start (Full-to-Full).</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.clean.head">Cleanliness</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.clean.desc">Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">cleaning_services</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.clean.head">Cleanliness</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.clean.desc">Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.</p>
+            </div>
           </div>
-          <div class="border-l-2 border-zinc-100 pl-8">
-            <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.mileage.head">Mileage</h4>
-            <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.mileage.desc">Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.</p>
+          <div class="flex gap-6">
+            <span class="material-symbols-outlined text-primary text-3xl">speed</span>
+            <div>
+              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.mileage.head">Mileage</h4>
+              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.mileage.desc">Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.</p>
+            </div>
           </div>
         </div>
       </div>
