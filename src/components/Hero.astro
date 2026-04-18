@@ -3,67 +3,106 @@
 ---
 
 <header
-  class="relative h-screen w-full overflow-hidden flex items-center bg-black"
+  class="relative min-h-[750px] md:h-screen w-full overflow-hidden flex items-center bg-black"
 >
   <div class="absolute inset-0 z-0">
-    <video 
-      autoplay 
-      muted 
-      loop 
-      playsinline 
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
       class="w-full h-full object-cover opacity-60"
     >
-      <source src="/Permintaan_Video_Mobile_Legends_Selesai.mp4" type="video/mp4" />
+      <source
+        src="/Permintaan_Video_Mobile_Legends_Selesai.mp4"
+        type="video/mp4"
+      />
     </video>
     <!-- Enhanced overlays for legibility -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"
+    >
+    </div>
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"
+    >
+    </div>
   </div>
-  
+
   <div class="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-24 pt-16">
     <div class="max-w-4xl fade-up">
       <div class="flex items-center gap-4 mb-4">
         <span class="w-12 h-px bg-primary"></span>
-        <p class="text-primary font-bold tracking-[0.4em] uppercase text-[9px]">Est. 2026 — Paris, France</p>
+        <p class="text-primary font-bold tracking-[0.4em] uppercase text-[9px]">
+          Est. 2026 — Paris, France
+        </p>
       </div>
-      
-      <h1 class="text-4xl md:text-5xl lg:text-[5.5rem] font-black leading-[0.9] tracking-[-0.05em] text-white mb-6 uppercase" data-i18n="hero.title">
-        The New<br/>
-        <span class="text-white">Standard</span><br/>
+
+      <h1
+        class="text-4xl md:text-5xl lg:text-[5.5rem] font-black leading-[0.9] tracking-[-0.05em] text-white mb-6 uppercase"
+        data-i18n="hero.title"
+      >
+        The New<br />
+        <span class="text-white">Standard</span><br />
         <span class="text-white/60">of Motion</span>
       </h1>
-      
+
       <div class="flex flex-col items-start gap-8">
-        <p class="max-w-md text-zinc-300/90 text-sm md:text-base leading-relaxed font-medium" data-i18n="hero.subtitle">
-          Premium local rentals in Paris. Experience the new standard of motion with a curated fleet designed for the discerning traveler.
+        <p
+          class="max-w-md text-zinc-300/90 text-sm md:text-base leading-relaxed font-medium"
+          data-i18n="hero.subtitle"
+        >
+          Premium local rentals in Paris. Experience the new standard of motion
+          with a curated fleet designed for the discerning traveler.
         </p>
         <div class="flex flex-row gap-6 items-center flex-nowrap">
-          <button class="bg-primary text-black px-7 py-4 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-white transition-all shadow-[0_15px_30px_rgba(209,179,126,0.15)] hover:shadow-[0_20px_40px_rgba(209,179,126,0.25)] active:scale-95 whitespace-nowrap" data-i18n="hero.cta.view">
+          <button
+            class="bg-primary text-black px-7 py-4 text-[9px] font-bold uppercase tracking-[0.2em] hover:bg-white transition-all shadow-[0_15px_30px_rgba(209,179,126,0.15)] hover:shadow-[0_20px_40px_rgba(209,179,126,0.25)] active:scale-95 whitespace-nowrap"
+            data-i18n="hero.cta.view"
+          >
             View Collection
           </button>
-          <button class="group flex items-center gap-3 text-white/80 hover:text-white text-[9px] font-bold uppercase tracking-[0.2em] transition-colors whitespace-nowrap">
+          <button
+            class="group flex items-center gap-3 text-white/80 hover:text-white text-[9px] font-bold uppercase tracking-[0.2em] transition-colors whitespace-nowrap"
+          >
             <span data-i18n="hero.cta.exp">Experience</span>
-            <span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2">arrow_forward</span>
+            <span
+              class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-2"
+              >arrow_forward</span
+            >
           </button>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- Scroll Indicator & Featured info -->
   <div class="absolute bottom-10 left-0 right-0 z-10 px-6 md:px-24 fade-up">
-    <div class="max-w-[1440px] mx-auto flex justify-between items-end border-t border-white/10 pt-4">
+    <div
+      class="max-w-[1440px] mx-auto flex justify-between items-end border-t border-white/10 pt-4"
+    >
       <div class="flex items-center gap-8">
         <div class="flex flex-col">
-          <span class="text-white/50 text-[8px] font-bold uppercase tracking-[0.2em] mb-1" data-i18n="hero.featured.head">Current Feature</span>
-          <span class="text-white text-[10px] font-black tracking-widest uppercase">Model S Plaid / Pure Black Edition</span>
+          <span
+            class="text-white/50 text-[8px] font-bold uppercase tracking-[0.2em] mb-1"
+            data-i18n="hero.featured.head">Current Feature</span
+          >
+          <span
+            class="text-white text-[10px] font-black tracking-widest uppercase"
+            >Model S Plaid / Pure Black Edition</span
+          >
         </div>
       </div>
       <div class="hidden md:flex flex-col items-end">
         <div class="animate-bounce mb-1">
-          <span class="material-symbols-outlined text-white/30 text-base">expand_more</span>
+          <span class="material-symbols-outlined text-white/30 text-base"
+            >expand_more</span
+          >
         </div>
-        <span class="text-white/30 text-[8px] font-bold uppercase tracking-[0.4em]" data-i18n="hero.explore">Explore</span>
+        <span
+          class="text-white/30 text-[8px] font-bold uppercase tracking-[0.4em]"
+          data-i18n="hero.explore">Explore</span
+        >
       </div>
     </div>
   </div>
