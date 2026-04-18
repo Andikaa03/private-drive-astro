@@ -4,30 +4,30 @@ import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Protocol & Contact | Private Drive Premium Collection">
-  <main class="bg-white pt-24">
+<Layout title="Protocol & Contact | Paris Elite Cars Premium Collection">
+  <main class="bg-background pt-24 text-white">
     <!-- Header Section -->
     <header class="max-w-[1440px] mx-auto px-6 md:px-24 py-20 flex flex-col md:flex-row items-center gap-16">
       <div class="flex-1 fade-up">
-        <h1 class="text-6xl md:text-8xl font-black text-zinc-900 uppercase tracking-tighter leading-[0.85] mb-8" data-i18n="contact.header">
+        <h1 class="text-6xl md:text-8xl font-black text-white uppercase tracking-tighter leading-[0.85] mb-8" data-i18n="contact.header">
           Protocol &<br/>
           Contact
         </h1>
-        <p class="text-zinc-500 text-sm md:text-base max-w-sm leading-relaxed font-medium" data-i18n="contact.desc">
+        <p class="text-zinc-400 text-sm md:text-base max-w-sm leading-relaxed font-bold opacity-80" data-i18n="contact.desc">
           Transparency is the foundation of our service. Review our operational requirements and connect with our concierge team to secure your allocation.
         </p>
       </div>
-      <div class="flex-1 w-full aspect-[4/3] relative overflow-hidden bg-zinc-100 fade-up">
+      <div class="flex-1 w-full aspect-[4/3] relative overflow-hidden bg-zinc-900 fade-up border border-white/5 shadow-2xl">
         <img 
           src="/premium_car_interior_grayscale.png" 
           alt="Premium Car Interior"
-          class="w-full h-full object-cover opacity-90"
+          class="w-full h-full object-cover opacity-70"
         />
       </div>
     </header>
 
     <!-- Detailed Policies Section (Verbatim SOW) -->
-    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-24 border-t border-zinc-100 grid grid-cols-1 md:grid-cols-2 gap-24">
+    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-32 border-t border-white/5 grid grid-cols-1 md:grid-cols-2 gap-24">
       <!-- Rental Requirements -->
       <div class="fade-up">
         <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-primary mb-12" data-i18n="contact.requirements">Rental Requirements</h3>
@@ -35,29 +35,29 @@ import Footer from '../components/Footer.astro';
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">badge</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.age.head">Age Limit</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.age.desc">All drivers must be <span class="text-zinc-900 font-bold">25 years or older</span>.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.age.head">Age Limit</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.age.desc">All drivers must be <span class="text-white font-bold underline decoration-primary/30">25 years or older</span>.</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">credit_score</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.license.head">Driver's License</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.license.desc">A valid, current driver’s license is required at the time of pickup.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.license.head">Driver's License</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.license.desc">A valid, current driver’s license is required at the time of pickup.</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">public</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.id.head">Identification</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.id.desc">A secondary form of ID (Passport) must be provided for all non-resident operators.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.id.head">Identification</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.id.desc">A secondary form of ID (Passport) must be provided for all non-resident operators.</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">account_balance_wallet</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.deposit.head">Security Deposit</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.deposit.desc">A refundable security deposit of <span class="text-zinc-900 font-bold">100 euros</span> is required via credit card for all rentals.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.deposit.head">Security Deposit</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.deposit.desc">A refundable security deposit of <span class="text-white font-bold underline decoration-primary/30">100 euros</span> is required via credit card for all rentals.</p>
             </div>
           </div>
         </div>
@@ -70,29 +70,29 @@ import Footer from '../components/Footer.astro';
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">smoke_free</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.smoking.head">No Smoking</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.smoking.desc">A strictly enforced no-smoking policy applies. A cleaning fee of <span class="text-zinc-900 font-bold">50 euros</span> applies to violations.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.smoking.head">No Smoking</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.smoking.desc">A strictly enforced no-smoking policy applies. A cleaning fee of <span class="text-white font-bold underline decoration-primary/30">50 euros</span> applies to violations.</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">local_gas_station</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.fuel.head">Fuel Policy</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.fuel.desc">Cars must be returned with the same level of fuel as at the start (Full-to-Full).</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.fuel.head">Fuel Policy</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.fuel.desc">Cars must be returned with the same level of fuel as at the start (Full-to-Full).</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">cleaning_services</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.clean.head">Cleanliness</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.clean.desc">Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.clean.head">Cleanliness</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.clean.desc">Vehicles should be returned clean. Excessive dirt or stains will incur a professional detailing fee.</p>
             </div>
           </div>
           <div class="flex gap-6">
             <span class="material-symbols-outlined text-primary text-3xl">speed</span>
             <div>
-              <h4 class="font-black text-zinc-900 uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.mileage.head">Mileage</h4>
-              <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.mileage.desc">Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.</p>
+              <h4 class="font-black text-white uppercase tracking-tight text-lg mb-2" data-i18n="contact.policy.mileage.head">Mileage</h4>
+              <p class="text-zinc-400 text-xs leading-relaxed" data-i18n="contact.policy.mileage.desc">Standard rentals include 20 km per day. Additional mileage is charged at 20 euros per km.</p>
             </div>
           </div>
         </div>
@@ -100,19 +100,19 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- Insurance & returns -->
-    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-24 bg-zinc-50 grid grid-cols-1 md:grid-cols-2 gap-24">
+    <section class="max-w-[1440px] mx-auto px-6 md:px-24 py-32 bg-zinc-900 shadow-2xl border-y border-white/5 grid grid-cols-1 md:grid-cols-2 gap-24">
       <div class="fade-up">
-        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-400 mb-12" data-i18n="contact.insurance">Insurance & Liability</h3>
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-500 mb-12" data-i18n="contact.insurance">Insurance & Liability</h3>
         <div class="space-y-8">
-          <p class="text-sm font-bold text-zinc-900 leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.insure.desc">Renters must provide proof of their own full-coverage insurance or purchase our supplemental protection plan.</p>
-          <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.damage.desc">Any damage, no matter how minor, must be reported to us immediately. Use is permitted within the French Metropolitan area only.</p>
+          <p class="text-sm font-black text-white leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.insure.desc">Renters must provide proof of their own full-coverage insurance or purchase our supplemental protection plan.</p>
+          <p class="text-zinc-400 text-xs leading-relaxed opacity-80" data-i18n="contact.policy.damage.desc">Any damage, no matter how minor, must be reported to us immediately. Use is permitted within the French Metropolitan area only.</p>
         </div>
       </div>
       <div class="fade-up">
-        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-400 mb-12" data-i18n="contact.cancellation">Cancellations & Returns</h3>
+        <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-500 mb-12" data-i18n="contact.cancellation">Cancellations & Returns</h3>
         <div class="space-y-8">
-          <p class="text-sm font-bold text-zinc-900 leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.refund.desc">Full refund for cancellations made at least 48 hours in advance.</p>
-          <p class="text-zinc-500 text-xs leading-relaxed" data-i18n="contact.policy.grace.desc">A grace period of 30 minutes is provided for returns; thereafter, hourly late fees apply in full.</p>
+          <p class="text-sm font-black text-white leading-relaxed uppercase tracking-tight" data-i18n="contact.policy.refund.desc">Full refund for cancellations made at least 48 hours in advance.</p>
+          <p class="text-zinc-400 text-xs leading-relaxed opacity-80" data-i18n="contact.policy.grace.desc">A grace period of 30 minutes is provided for returns; thereafter, hourly late fees apply in full.</p>
         </div>
       </div>
     </section>
@@ -120,48 +120,48 @@ import Footer from '../components/Footer.astro';
     <!-- Inquiry Form -->
     <section class="py-32 px-6 md:px-24">
       <div class="max-w-[1440px] mx-auto text-center pt-24 fade-up">
-        <h2 class="text-4xl md:text-5xl font-black text-zinc-900 uppercase tracking-tighter mb-4" data-i18n="contact.form.title">Secure Your Allocation</h2>
-        <p class="text-zinc-400 text-xs font-bold uppercase tracking-[0.3em] mb-20" data-i18n="contact.form.sub">Direct Lead Routing to Concierge Service</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white uppercase tracking-tighter mb-4" data-i18n="contact.form.title">Secure Your Allocation</h2>
+        <p class="text-primary text-[10px] font-black uppercase tracking-[0.4em] mb-20" data-i18n="contact.form.sub">Direct Lead Routing to Concierge Service</p>
         
-        <form action="mailto:concierge@privatedrive.com" method="POST" enctype="text/plain" class="max-w-4xl mx-auto text-left space-y-12">
+        <form action="mailto:concierge@pariselitecars.com" method="POST" enctype="text/plain" class="max-w-4xl mx-auto text-left space-y-12">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             <div class="space-y-4">
-              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.name">Full Name</label>
-              <input type="text" name="name" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium" placeholder="Full Name" data-i18n="contact.form.name.placeholder" />
+              <label class="text-[9px] font-black uppercase tracking-widest text-zinc-500" data-i18n="contact.form.name">Full Name</label>
+              <input type="text" name="name" required class="w-full bg-transparent border-b border-white/10 py-4 hover:border-primary focus:border-primary outline-none transition-all text-sm font-bold placeholder:text-zinc-800" placeholder="Full Name" data-i18n="contact.form.name.placeholder" />
             </div>
             <div class="space-y-4">
-              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.email">Email Address</label>
-              <input type="email" name="email" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium" placeholder="email@example.com" data-i18n="contact.form.email.placeholder" />
+              <label class="text-[9px] font-black uppercase tracking-widest text-zinc-500" data-i18n="contact.form.email">Email Address</label>
+              <input type="email" name="email" required class="w-full bg-transparent border-b border-white/10 py-4 hover:border-primary focus:border-primary outline-none transition-all text-sm font-bold placeholder:text-zinc-800" placeholder="email@example.com" data-i18n="contact.form.email.placeholder" />
             </div>
             <div class="space-y-4">
-              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.dates">Dates Requested</label>
-              <input type="date" name="dates" required class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium text-zinc-900 uppercase tracking-widest" />
+              <label class="text-[9px] font-black uppercase tracking-widest text-zinc-500" data-i18n="contact.form.dates">Dates Requested</label>
+              <input type="date" name="dates" required class="w-full bg-transparent border-b border-white/10 py-4 hover:border-primary focus:border-primary outline-none transition-all text-sm font-bold text-white uppercase tracking-widest" />
             </div>
             <div class="space-y-4">
-              <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.vehicle">Preferred Vehicle</label>
-              <select name="vehicle" class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium">
-                <option value="" disabled selected data-i18n="contact.form.vehicle.placeholder">Select from Inventory</option>
-                <option>Tesla Model 3</option>
-                <option>Tesla Model S Plaid</option>
-                <option>Jeep Wrangler (Red)</option>
-                <option>Jeep Grand Cherokee (Dark Green)</option>
-                <option>Audi A6 Sedan (White)</option>
-                <option>Peugeot 208 GT (Black)</option>
-                <option>Nissan Pathfinder SL (White)</option>
-                <option>Kia Sorento (White)</option>
-                <option>Mercedes-Benz A-Class (Black)</option>
-                <option>Hyundai Elantra (Black)</option>
+              <label class="text-[9px] font-black uppercase tracking-widest text-zinc-500" data-i18n="contact.form.vehicle">Preferred Vehicle</label>
+              <select name="vehicle" class="w-full bg-transparent border-b border-white/10 py-4 hover:border-primary focus:border-primary outline-none transition-all text-sm font-bold text-zinc-300">
+                <option value="" disabled selected data-i18n="contact.form.vehicle.placeholder" class="bg-black">Select from Inventory</option>
+                <option class="bg-black">Tesla Model 3</option>
+                <option class="bg-black">Tesla Model S Plaid</option>
+                <option class="bg-black">Jeep Wrangler (Red)</option>
+                <option class="bg-black">Jeep Grand Cherokee (Dark Green)</option>
+                <option class="bg-black">Audi A6 Sedan (White)</option>
+                <option class="bg-black">Peugeot 208 GT (Black)</option>
+                <option class="bg-black">Nissan Pathfinder SL (White)</option>
+                <option class="bg-black">Kia Sorento (White)</option>
+                <option class="bg-black">Mercedes-Benz A-Class (Black)</option>
+                <option class="bg-black">Hyundai Elantra (Black)</option>
               </select>
             </div>
           </div>
           
           <div class="space-y-4">
-            <label class="text-[9px] font-bold uppercase tracking-widest text-zinc-400" data-i18n="contact.form.special">Special Requirements</label>
-            <textarea name="requirements" rows="3" class="w-full bg-transparent border-b border-zinc-300 py-3 hover:border-zinc-500 focus:border-primary outline-none transition-colors text-sm font-medium resize-none" placeholder="Special requirements or delivery address..." data-i18n="contact.form.req.placeholder"></textarea>
+            <label class="text-[9px] font-black uppercase tracking-widest text-zinc-500" data-i18n="contact.form.special">Special Requirements</label>
+            <textarea name="requirements" rows="3" class="w-full bg-transparent border-b border-white/10 py-4 hover:border-primary focus:border-primary outline-none transition-all text-sm font-bold resize-none placeholder:text-zinc-800" placeholder="Special requirements or delivery address..." data-i18n="contact.form.req.placeholder"></textarea>
           </div>
 
           <div class="flex justify-center pt-12">
-            <button type="submit" class="bg-primary text-white px-12 py-5 text-[10px] font-black uppercase tracking-[0.3em] hover:bg-zinc-900 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 shadow-xl active:scale-95 flex items-center gap-3 group" data-i18n="contact.form.btn">
+            <button type="submit" class="bg-primary text-black px-12 py-6 text-[10px] font-black uppercase tracking-[0.4em] hover:bg-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 shadow-xl active:scale-95 flex items-center gap-3 group" data-i18n="contact.form.btn">
               Submit Inquire Now
               <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </button>
@@ -171,7 +171,7 @@ import Footer from '../components/Footer.astro';
     </section>
 
     <!-- Google Maps Section -->
-    <section id="map-section" class="relative w-full h-[600px] overflow-hidden border-t border-zinc-100">
+    <section id="map-section" class="relative w-full h-[600px] overflow-hidden border-t border-white/5 grayscale contrast-125 invert opacity-80">
       <iframe 
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.2922926156710444!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sEiffel%20Tower!5e0!3m2!1sen!2sfr!4v1621258169134!5m2!1sen!2sfr" 
         width="100%" 
@@ -181,10 +181,10 @@ import Footer from '../components/Footer.astro';
         loading="lazy">
       </iframe>
       <div class="absolute inset-0 pointer-events-none flex items-center justify-center p-6">
-        <div class="bg-white p-8 border border-zinc-200 shadow-2xl text-center max-w-sm">
-          <h4 class="text-[10px] font-black tracking-[0.4em] uppercase text-zinc-900 mb-3 underline underline-offset-8 decoration-primary" data-i18n="contact.map.head">Official Headquarters</h4>
-          <p class="text-[11px] text-zinc-400 leading-relaxed font-bold uppercase tracking-widest mb-1" data-i18n="contact.map.region">Paris Metropolitan Area</p>
-          <p class="text-[9px] text-zinc-400 font-medium" data-i18n="contact.map.country">French Republic</p>
+        <div class="bg-zinc-900/90 backdrop-blur-md p-8 border border-white/10 shadow-3xl text-center max-w-sm">
+          <h4 class="text-[10px] font-black tracking-[0.4em] uppercase text-white mb-3 underline underline-offset-8 decoration-primary" data-i18n="contact.map.head">Official Headquarters</h4>
+          <p class="text-[11px] text-zinc-400 leading-relaxed font-black uppercase tracking-widest mb-1" data-i18n="contact.map.region">Paris Metropolitan Area</p>
+          <p class="text-[9px] text-zinc-500 font-bold" data-i18n="contact.map.country">French Republic</p>
         </div>
       </div>
     </section>
